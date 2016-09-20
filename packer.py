@@ -44,9 +44,9 @@ class Packer(object):
         self._add_opt('-debug' if debug else None)
         self._add_opt('-force' if force else None)
         self._append_base_arguments()
-        self._add_opt(self.packerfile)
+        self._add_opt(self.packerfile)	
 
-        return self.packer_cmd()
+        return self.packer_cmd().stdout
 
     def fix(self, to_file=None):
         """Implements the `packer fix` function
